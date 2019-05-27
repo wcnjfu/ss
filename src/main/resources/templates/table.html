@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/common/vue.min.js"></script>
+    <script src="../static/common/axios.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div style="margin: auto;width: 500px;">
+        <div style="width: 200px;margin: auto;font-size: 30px;text-align: center"> <p>{{ message }}</p></div>
+        <table style="width: 100%">
+            <thead>
+            <th style="width: 50%;">用户名</th>
+            <th style="width: 50%">密  码</th>
+            </thead>
+            <tbody>
+            <tr v-for="(item,index) in tables" :key="index">
+                <td align="center">{{item.loginName}}</td>
+                <td align="center">{{item.password}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../static/js/table.js"></script>
+</body>
+</html>
